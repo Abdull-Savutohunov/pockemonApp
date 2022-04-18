@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@1,300&family=Montserrat:wght@200;300;400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap'); 
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+body{ 
+    font-family: 'Roboto', sans-serif; 
+} 
+.back{
+    position: absolute;
+    cursor: pointer;
+    bottom: 1rem;
+    right: 1rem;
+}
+.wrapper{ 
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    padding: 2em; 
+    gap: 20px; 
+} 
+.card{ 
+    background-color: rgb(250, 250, 250); 
+    border: 1px solid gold; 
+    cursor: pointer; 
+    transition: .5s; 
+    bottom:  0 0 5px rgba(255,217,0,0.674); 
+    padding: 1em; 
+    font-size: 20px; 
+} 
+.card:hover{ 
+    background-color: rgb(230, 230, 230); 
+} 
+.singleWrapper{ 
+    padding: 2em; 
+    display: flex; 
+    gap: 30px; 
+    align-items: center; 
+} 
+.single img{ 
+    width: 400px; 
+    height: 400px; 
+} 
+.single ul{ 
+    list-style: none; 
+} 
+.single ul li{ 
+    font-size: 20px; 
+    margin: 10px 0; 
+} 
+.single ul li span{ 
+    font-weight: 600; 
+    text-shadow: 0 0 2pt gold; 
+}  
+.back{ 
+    border: none; 
+    outline: none; 
+    border-radius: 5px; 
+    background-color: gold; 
+    color: #333; 
+    font-size: 20px; 
+    padding: 12px 16px; 
+    cursor: pointer; 
+    margin-left: 50%; 
+    transform: translateX(-50%); 
+} 
+.back:hover{ 
+    background-color: gold; 
+} 
+.buttons{ 
+    width: 100%; 
+    padding: 1em 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    align-items: center; 
+} 
+.next, .prev , .inputButton{ 
+    border: none; 
+    outline: none; 
+    background: none; 
+    border-radius: 5px; 
+    padding: 12px 16px; 
+    font-size: 20px; 
+    transition: .5s; 
+    cursor: pointer; 
+} 
+.next:disabled, .prev:disabled{ 
+    opacity: 0.6; 
+    pointer-events: none; 
+    cursor: default; 
+} 
+.next{ 
+    background-color: limegreen; 
+} 
+.next:hover{ 
+    background-color: rgba(37, 159, 37, 1); 
+} 
+.prev{ 
+    background-color: lightblue; 
+} 
+.prev:hover{ 
+    background-color: rgb(85, 166, 193) 
+} 
+.selectPage{ 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+} 
+.pageInput{ 
+    padding: 12px 16px; 
+    border-radius: 5px; 
+    background: none; 
+    box-shadow: 2px 2px 2px #333; 
+    border: 1px solid #333; 
+    outline: none; 
+    font-size: 18px; 
+} 
+.inputButton{ 
+    background: #333; 
+    color: white; 
+    transition: .3s; 
+} 
+.inputButton:hover{ 
+    background-color: rgba(37, 159, 37, 1); 
+    color: white; 
+}
