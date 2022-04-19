@@ -7,12 +7,12 @@
 body{ 
     font-family: 'Roboto', sans-serif; 
 } 
-.back{
+/* .back{
     position: absolute;
     cursor: pointer;
     bottom: 1rem;
     right: 1rem;
-}
+} */
 .wrapper{ 
     display: flex; 
     align-items: center; 

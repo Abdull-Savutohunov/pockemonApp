@@ -62,12 +62,6 @@ function getSingleData(url){
                     <li>
                         Height: <span>${cb.height}</span>
                     </li>
-                    <li>
-                        NUmber: <span>${cb.number}</span>
-                    </li>
-                    <li>
-                        Type: <span>${cb.type}</span>
-                    </li>
                 </ul>
             </div>
             <button class="back" onclick="goBack()">Go Back</button>
