@@ -1,6 +1,6 @@
 const $wrapper = document.querySelector('.wrapper');
 const $container = document.querySelector('.container');
-const back = document.querySelector('.back')
+// const back = document.querySelector('.back')
 const $next = document.querySelector('.next');
 const $prev = document.querySelector('.prev');
 const $currentPage = document.querySelector('.currentPage');
@@ -169,8 +169,8 @@ $inputButton.addEventListener('click' , e => {
     }
 })
 
-back.addEventListener('click', e => {
-    e.preventDefault()
+// back.addEventListener('click', e => {
+//     e.preventDefault()
 
-    window.open('./auth.html', '_self')
-})
+//     window.open('./auth.html', '_self')
+// })
