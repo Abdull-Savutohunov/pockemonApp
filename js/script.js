@@ -21,6 +21,8 @@ let currentPage = 1
 
 let selectPage = 1
 
+let currentPokemon = 0
+
 window.addEventListener('load' , () => {
     getData(`${BASE_URL}pokemon` , `limit=${LIMIT}&offset=${offsetCounter}offsetCounter` , cb => {
         cardTeplate(cb.results )
@@ -46,27 +48,36 @@ function cardTeplate(base){
 
 function getSingleData(url){
     getData(url , '' , cb => {
-        console.log(cb);
-       $container.innerHTML = `
-        <div class="single">
-            <div class="signleWrapper">
-                <img src="${cb.sprites.other.dream_world.front_default}" alt="pokemonImage">
+        currentPokemon = cb.id
+        $container.innerHTML = `
+            <div class="single">
+                <div class="signleWrapper">
+                    <img src="${cb.sprites.other.dream_world.front_default}" alt="pokemonImage">
 
-                <ul class="">
-                    <li>
-                        Name: <span>${cb.name}</span>
-                    </li>
-                    <li>
-                        Weight: <span>${cb.weight}</span>
-                    </li>
-                    <li>
-                        Height: <span>${cb.height}</span>
-                    </li>
-                </ul>
+                    <ul class="">
+                        <li>
+                            Name: <span>${cb.name}</span>
+                        </li>
+                        <li>
+                            Weight: <span>${cb.weight}</span>
+                        </li>
+                        <li>
+                            Height: <span>${cb.height}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="buttons"> 
+                    <button class="prev" onclick="prevPokemon('${currentPokemon}')">Prev</button> 
+                    <div class="page"> 
+                        <span class="currentPage"></span> 
+                        
+                        <span class="allPages"></span> 
+                    </div> 
+                    <button class="next" onclick="nextPokemon('${currentPokemon}')">Next</button> 
+                </div> 
+                <button class="back" onclick="goBack()">Go Back</button>
             </div>
-            <button class="back" onclick="goBack()">Go Back</button>
-        </div>
-       `
+        `
     })
 }
 
@@ -168,3 +179,12 @@ $inputButton.addEventListener('click' , e => {
 
 //     window.open('./auth.html', '_self')
 // })
+
+
+function nextPokemon(id){
+    getSingleData(`${BASE_URL}pokemon/${+id + 1}`)
+}
+function prevPokemon(id){
+    getSingleData(`${BASE_URL}pokemon/${+id - 1}`)
+
+}
